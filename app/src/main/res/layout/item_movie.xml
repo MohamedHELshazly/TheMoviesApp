@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:background="#000000">
+    >
+
+    <ImageView
+        android:id="@+id/mvPosterImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="150dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/captin_marvel"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@+id/mvPosterImage"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:layout_height="match_parent"
+
+        >
+
+        <TextView
+            android:id="@+id/mvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textStyle="bold"
+            android:text="Captain Marvel"
+            android:textSize="14sp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="0dp"
+            android:paddingBottom="8dp"/>
+
+
+
+        <TextView
+            android:id="@+id/mvReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignLeft="@+id/mvTitle"
+            android:layout_below="@+id/mvTitle"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="2019-03-06"
+            android:textSize="12sp"
+            android:textColor="#808080"
+            android:paddingBottom="8dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/viewCountAndNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/mvReleaseDate"
+            android:layout_below="@+id/mvReleaseDate">
+
+            <TextView
+                android:id="@+id/mvVoteCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:background="#00000000"
+                android:maxLines="1"
+                android:ellipsize="end"
+
+                android:text="1000"
+                android:textSize="12sp"
+                android:textColor="@color/colorWhite"
+                android:paddingBottom="8dp"
+                android:drawableLeft="@drawable/eye_open1"
+                android:drawablePadding="5dp"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/mvVoteAverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewCountAndNo"
+            android:drawableLeft="@drawable/star"
+            android:text="91%"
+            android:textSize="14sp"
+            android:textColor="@color/colorWhite"
+            android:drawablePadding="5dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
